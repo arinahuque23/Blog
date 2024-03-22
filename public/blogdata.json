@@ -1,0 +1,186 @@
+[
+  {
+    "id": 1,
+    "title": "The Joy of Exploration",
+    "author": {
+      "name": "Sarah Parker",
+      "author_image": "https://i.ibb.co/thGQdyk/depositphot.webp"
+    },
+    "date": "2024-04-01",
+    "content": "Exploring new places fills the heart with joy and wonder. Every corner turned is a new adventure waiting to unfold.",
+    "image": "https://i.ibb.co/TmdJGpQ/photo-1476264814085-136004d4b582.jpg",
+    "category": "Travel",
+    "likes": 120,
+    "comments": [
+      {
+        "user": "JohnDoe",
+        "comment": "Great article! I totally agree that exploring new places is an amazing experience."
+      },
+      {
+        "user": "JaneSmith",
+        "comment": "I've always wanted to travel more. Your article inspires me to start planning my next adventure!"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Baking Bliss: A Culinary Adventure",
+    "author": {
+      "name": "Michael Baker",
+      "author_image": "https://i.ibb.co/DtXDFwd/pexels-photo-733872.webp"
+    },
+    "date": "2024-03-20",
+    "content": "Baking is not just a hobby; it's a journey into the realms of taste and aroma. Join me in this culinary adventure!",
+    "image": "https://i.ibb.co/QYkHdqZ/pngtree-sunset-splend-15641799.jpg",
+    "category": "Food",
+    "likes": 98,
+    "comments": [
+      {
+        "user": "Foodie123",
+        "comment": "Your recipes are always amazing! Can't wait to try out the latest one you shared."
+      },
+      {
+        "user": "BakeMaster",
+        "comment": "I'm always on the lookout for new baking ideas. Your blog is a treasure trove!"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Unraveling the Mysteries of the Universe",
+    "author": {
+      "name": "Emily Newton",
+      "author_image": "https://i.ibb.co/rQ2C5KQ/young-beautiful-woman-pink-war285396-896.jpg"
+    },
+    "date": "2024-03-12",
+    "content": "The universe is vast and full of mysteries waiting to be unraveled. Let's embark on a journey to explore the cosmos.",
+    "image": "https://i.ibb.co/Nm7sVyF/beautiful-landsc516.webp",
+    "category": "Science",
+    "likes": 205,
+    "comments": [
+      {
+        "user": "CosmoExplorer",
+        "comment": "Your articles always make me ponder the wonders of the universe. Keep up the fantastic work!"
+      },
+      {
+        "user": "AstroFanatic",
+        "comment": "As someone fascinated by astronomy, your blog is like a treasure chest of knowledge!"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Gardening Tips for Beginners",
+    "author": {
+      "name": "Adam Green",
+      "author_image": "https://i.ibb.co/RDq6RC7/59KZar.jpg"
+    },
+    "date": "2024-02-28",
+    "content": "Starting a garden can be daunting, but with the right guidance, anyone can become a successful gardener. Let's get our hands dirty!",
+    "image": "https://i.ibb.co/Kjp91Qt/download.jpg",
+    "category": "Gardening",
+    "likes": 87,
+    "comments": [
+      {
+        "user": "GreenThumb",
+        "comment": "Your tips have been invaluable in helping me set up my first garden. Thank you!"
+      },
+      {
+        "user": "NatureLover",
+        "comment": "Your blog has inspired me to start my own little green haven at home."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "DIY Home Decor Ideas",
+    "author": {
+      "name": "Sophia Craft",
+      "author_image": "https://i.ibb.co/LpftLHy/360-F-t440f14.jpg"
+    },
+    "date": "2024-02-15",
+    "content": "Transform your living space with these creative and budget-friendly DIY home decor ideas. Get ready to unleash your inner artist!",
+    "image": "https://i.ibb.co/FBJy2bg/beach-2737460-960-720.jpg",
+    "category": "Home & Decor",
+    "likes": 150,
+    "comments": [
+      {
+        "user": "HomeImprover",
+        "comment": "I've been looking for some fresh ideas to spruce up my home. Your blog came to the rescue!"
+      },
+      {
+        "user": "CraftyDIYer",
+        "comment": "Your DIY projects are so inspiring! Can't wait to try them out myself."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Fitness Fundamentals: Getting Started",
+    "author": {
+      "name": "David Fitness",
+      "author_image": "https://i.ibb.co/SKND04h/young-bearded-man-with-striped-shirt-273609-5677.jpg"
+    },
+    "date": "2024-01-25",
+    "content": "Embarking on a fitness journey can be overwhelming, but it all starts with taking that first step. Let's dive into the fundamentals together!",
+    "image": "https://i.ibb.co/N1rSgDy/6182046158-44f4c8182a-b.jpg",
+    "category": "Health & Fitness",
+    "likes": 180,
+    "comments": [
+      {
+        "user": "FitFanatic",
+        "comment": "Your fitness tips are practical and easy to follow. Keep up the great work!"
+      },
+      {
+        "user": "ExerciseEnthusiast",
+        "comment": "Your blog motivates me to stay consistent with my workouts. Thanks for the inspiration!"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Fitness Fundamentals: Getting Started",
+    "author": {
+      "name": "David Fitness",
+      "author_image": "https://i.ibb.co/WgTwh6q/zzzd-FC4kh-Gkmqc8noe6h.jpg"
+    },
+    "date": "2024-01-25",
+    "content": "Embarking on a fitness journey can be overwhelming, but it all starts with taking that first step. Let's dive into the fundamentals together!",
+    "image": "https://i.ibb.co/C0Z18pg/1000-F-458047350-LYNH6bwg-H1s-EYe.jpg",
+    "category": "Health & Fitness",
+    "likes": 180,
+    "comments": [
+      {
+        "user": "FitFanatic",
+        "comment": "Your fitness tips are practical and easy to follow. Keep up the great work!"
+      },
+      {
+        "user": "ExerciseEnthusiast",
+        "comment": "Your blog motivates me to stay consistent with my workouts. Thanks for the inspiration!"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Fitness Fundamentals: Getting Started",
+    "author": {
+      "name": "David Fitness",
+      "author_image": "https://i.ibb.co/WgTwh6q/zzzd-FC4kh-Gkmqc8noe6h.jpg"
+    },
+    "date": "2024-01-25",
+    "content": "Embarking on a fitness journey can be overwhelming, but it all starts with taking that first step. Let's dive into the fundamentals together!",
+    "image": "https://i.ibb.co/xHgvgPh/1-beach-sea-photography.jpg",
+    "category": "Health & Fitness",
+    "likes": 180,
+    "comments": [
+      {
+        "user": "FitFanatic",
+        "comment": "Your fitness tips are practical and easy to follow. Keep up the great work!"
+      },
+      {
+        "user": "ExerciseEnthusiast",
+        "comment": "Your blog motivates me to stay consistent with my workouts. Thanks for the inspiration!"
+      }
+    ]
+  }
+]

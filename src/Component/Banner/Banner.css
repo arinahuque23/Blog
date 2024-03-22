@@ -1,0 +1,78 @@
+@keyframes fadeIn {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 2;
+            }
+          }
+          
+          .animate-fadeIn {
+            animation: fadeIn 5s ease-out;
+          }
+          
+          @keyframes animateBackground {
+            0% {
+              background-position: 0% 0%;
+            }
+            100% {
+              background-position: 100% 100%;
+            }
+          }
+          
+          .bg-parallax {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://i.ibb.co/qBxNyX1/beach-office.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: -1;
+            animation: animateBackground 20s linear infinite alternate;
+          }
+          
+          @keyframes scale {
+            0% {
+              transform: scale(0.5);
+            }
+            100% {
+              transform: scale(1);
+            }
+          }
+          
+          .animate-scale {
+            animation: scale 5s ease-out forwards;
+          }
+          
+          @keyframes rotate {
+            0% {
+              transform: rotate(-10deg);
+            }
+            100% {
+              transform: rotate(0deg);
+            }
+          }
+          
+          .animate-rotate {
+            animation: rotate 1s ease-out forwards;
+          }
+          
+          @keyframes float {
+            0% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(-10px);
+            }
+            100% {
+              transform: translateY(0);
+            }
+          }
+          
+          .animate-float {
+            animation: float 1s ease-out infinite;
+          }
+          
