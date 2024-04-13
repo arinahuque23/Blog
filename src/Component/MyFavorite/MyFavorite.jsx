@@ -7,7 +7,7 @@ const MyFavorite = () => {
   const [isShow, setIsShow] = useState(false);
 
   useEffect(() => {
-    const favoritesData = JSON.parse(localStorage.getItem("carts"));
+    const favoritesData = JSON.parse(localStorage.getItem("likedItems"));
     if (favoritesData && favoritesData.length > 0) {
       setFavorites(favoritesData);
     } else {
@@ -18,11 +18,11 @@ const MyFavorite = () => {
   const handleRemoveFavorite = (id) => {
     const updatedFavorites = favorites.filter((favorite) => favorite.id !== id);
     setFavorites(updatedFavorites);
-    localStorage.setItem("carts", JSON.stringify(updatedFavorites));
+    localStorage.setItem("likedItems", JSON.stringify(updatedFavorites));
   };
 
   const handleRemoveAllFavorites = () => {
-    localStorage.removeItem("carts");
+    localStorage.removeItem("likedItems");
     setFavorites([]);
     setNoFound(true);
   };
@@ -44,6 +44,7 @@ const MyFavorite = () => {
             </button>
           )}
           <br />
+          <h2>{favorites.length}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mx-auto sm:mx-4 md:mx-8 lg:mx-12 xl:mx-20">
             {isShow
               ? favorites.map((favorite) => (

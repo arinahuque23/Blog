@@ -1,7 +1,25 @@
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Navbar = () => {
-  
+  const [favoritesCount, setFavoritesCount] = useState(0);
+
+  useEffect(() => {
+    const updateFavoritesCount = () => {
+      const favoritesData = JSON.parse(localStorage.getItem("likedItems")) || [];
+      setFavoritesCount(favoritesData.length);
+    };
+
+    updateFavoritesCount(); // Initial update
+
+    window.addEventListener("storage", updateFavoritesCount);
+
+    return () => {
+      window.removeEventListener("storage", updateFavoritesCount);
+    };
+  }, []);
+
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -34,18 +52,19 @@ const Navbar = () => {
                 <Link to="/about">About Us</Link>
               </li>
               <li>
-                <Link to="/contact">
-                  Contact Us
-                </Link>
+                <Link to="/contact">Contact Us</Link>
               </li>
               <li>
-                <Link to="/login">
-                  Login
+                <Link to="/favorite">
+                  My Favorite
+                  <span className="text-blue-500">+{favoritesCount}</span>
                 </Link>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-2xl text-blue-500 font-bold">Blog<span className="text-orange-500">Hub</span></a>
+          <a className="btn btn-ghost text-2xl text-blue-500 font-bold">
+            Blog<span className="text-orange-500">Hub</span>
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-xl font-serif">
@@ -56,18 +75,16 @@ const Navbar = () => {
               <Link to="/about">About Us</Link>
             </li>
             <li>
-              <Link to="/contact">
-                Contact Us
-              </Link>
+              <Link to="/contact">Contact Us</Link>
             </li>
             <li>
               <Link to="/favorite">
                 My Favorite
+                <span className="text-blue-500">+{favoritesCount}</span>
               </Link>
             </li>
           </ul>
         </div>
-        
       </div>
     </div>
   );

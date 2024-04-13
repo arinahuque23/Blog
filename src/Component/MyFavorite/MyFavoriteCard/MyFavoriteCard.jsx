@@ -13,9 +13,9 @@ const MyFavoriteCard = ({ favorite, onRemove }) => {
 
   const handleRemove = () => {
     // Remove item from localStorage
-    const favoritesData = JSON.parse(localStorage.getItem('carts'));
+    const favoritesData = JSON.parse(localStorage.getItem('likedItems'));
     const updatedFavorites = favoritesData.filter((item) => item.id !== id);
-    localStorage.setItem('carts', JSON.stringify(updatedFavorites));
+    localStorage.setItem('likedItems', JSON.stringify(updatedFavorites));
 
     // Trigger the onRemove callback to update the UI
     onRemove(id);

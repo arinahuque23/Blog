@@ -1,72 +1,99 @@
-/* eslint-disable react/no-unescaped-entities */
-import { Link } from "react-router-dom";
 import "./AboutUs.css";
+import { FaBlogger, FaComments, FaUserFriends, FaSyncAlt } from "react-icons/fa";
 
 const AboutUs = () => {
   return (
-    <div className="mx-4 md:mx-auto">
-      <section className="bg-gray-200 text-black py-20">
-        <div className="container mx-auto">
-          <h1 className="text-4xl font-bold mb-16 text-center">About Us</h1>
-          <div className="flex flex-wrap justify-center items-center">
-            <div className="w-full md:w-1/2 px-4 mb-8 md:mb-0">
-              <img
-                src="https://i.ibb.co/9GbfrQJ/istockphoto-614429946-612x612.jpg"
-                alt="Team"
-                className="rounded-lg shadow-lg w-full h-auto animate-float"
-              />
-            </div>
-            <div className="w-full md:w-1/2 px-4">
-              <p className="text-lg mb-4">
-                Welcome to our blog! We are passionate about delivering
-                high-quality content that informs, educates, and entertains our
-                readers. Our team of dedicated writers covers a wide range of
-                topics, including technology, lifestyle, health, travel, and
-                more.
-              </p>
-              <p className="text-lg mb-4">
-                Our mission is to inspire and empower our audience with
-                thought-provoking articles, insightful stories, and useful tips
-                and advice. Whether you're looking for the latest trends in
-                fashion, tips for healthy living, or travel inspiration, you'll
-                find it all here on our blog.
-              </p>
-              <p className="text-lg">
-                Thank you for joining us on this journey. We hope you enjoy
-                exploring our content and find value in what we share.
-              </p>
-              <div className="text-center mt-8">
-                <Link
-                  to="/"
-                  className="bg-yellow-500 hover:bg-yellow-400 text-black font-semibold py-2 px-4 rounded shadow"
-                >
-                  Explore Our Blog
-                </Link>
-              </div>
-            </div>
+    <div>
+      <div className="sm:flex items-center max-w-screen-xl">
+        <div className="sm:w-1/2 p-10">
+          <div className="image object-center text-center">
+            <img src="https://i.ibb.co/4MZ47wt/istockphoto-1086341762-612x612.jpg" alt="Company Image" />
           </div>
         </div>
-      </section>
-
-      <section className=" text-gray-800 py-20">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold mb-8 text-center">
-            Our Mission & Vision
-          </h2>
-          <div className="flex flex-wrap justify-center items-center">
-            <div className="w-full md:w-1/2 px-4 mb-8 md:mb-0">
-              <p className="text-lg mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget
-                justo ac risus pulvinar eleifend. Integer luctus purus vitae
-                libero mollis, at mattis enim placerat.
+        <div className="sm:w-1/2 p-5">
+          <div className="text">
+            <span className="text-gray-500 border-b-2 border-indigo-600 uppercase">
+              About us
+            </span>
+            <h2 className="my-4 font-bold text-3xl sm:text-4xl ">
+              About <span className="text-indigo-600">Our Company</span>
+            </h2>
+            <p className="text-gray-700">
+              Welcome to Our Company! We are dedicated to providing innovative solutions in the tech and finance industry. Our mission is to simplify financial operations for individuals and businesses alike.
+            </p>
+          </div>
+        </div>
+      </div>
+      <section className="">
+        <div className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="lg:text-center">
+              <h2 className="font-heading mb-4 bg-orange-100 text-orange-800 px-4 py-2 rounded-lg md:w-64 md:mx-auto text-xs font-semibold tracking-widest text-black uppercase title-font">
+                Why choose us?
+              </h2>
+              <p className="font-heading mt-2 text-3xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">
+                We know tech, we know finance. We are fintech experts.
+              </p>
+              <p className="mt-4 max-w-2xl text-lg text-gray-500 lg:mx-auto">
+                We specialize in handling taxation and cash flows, ensuring our clients receive top-notch services tailored to their needs.
               </p>
             </div>
-            <div className="w-full md:w-1/2 px-4">
-              <p className="text-lg mb-4">
-                Donec maximus mi eget erat pharetra, ac consectetur velit
-                dapibus. Nulla facilisi. Proin hendrerit elit et metus
-                tincidunt, eget tempus urna gravida.
-              </p>
+
+            <div className="mt-10">
+              <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                <div className="relative">
+                  <dt>
+                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-black">
+                      <FaBlogger />
+                    </div>
+                    <p className="font-heading ml-16 text-lg leading-6 font-bold text-gray-700">
+                      Engaging Blog Content
+                    </p>
+                  </dt>
+                  <dd className="mt-2 ml-16 text-base text-gray-500">
+                    Our engaging blog content offers valuable insights and updates in the tech and finance industry, keeping our audience informed and engaged.
+                  </dd>
+                </div>
+                <div className="relative">
+                  <dt>
+                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-black">
+                      <FaComments />
+                    </div>
+                    <p className="font-heading ml-16 text-lg leading-6 font-bold text-gray-700">
+                      Interactive Experience
+                    </p>
+                  </dt>
+                  <dd className="mt-2 ml-16 text-base text-gray-500">
+                    Experience an interactive and user-friendly platform designed for seamless navigation and enhanced readability.
+                  </dd>
+                </div>
+                <div className="relative">
+                  <dt>
+                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-black">
+                      <FaUserFriends />
+                    </div>
+                    <p className="font-heading ml-16 text-lg leading-6 font-bold text-gray-700">
+                      Engaging Community
+                    </p>
+                  </dt>
+                  <dd className="mt-2 ml-16 text-base text-gray-500">
+                    Join our vibrant community of readers and contributors who share insights, experiences, and ideas.
+                  </dd>
+                </div>
+                <div className="relative">
+                  <dt>
+                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-black">
+                      <FaSyncAlt />
+                    </div>
+                    <p className="font-heading ml-16 text-lg leading-6 font-bold text-gray-700">
+                      Regular Updates
+                    </p>
+                  </dt>
+                  <dd className="mt-2 ml-16 text-base text-gray-500">
+                    Stay up-to-date with the latest news, trends, and developments through our regularly updated content.
+                  </dd>
+                </div>
+              </dl>
             </div>
           </div>
         </div>

@@ -1,44 +1,51 @@
 import { useEffect, useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
-import { FaUser, FaHeart } from "react-icons/fa";
-import Swal from "sweetalert2"; 
+import { FaUser, FaRegHeart, FaShareSquare, FaHeart } from "react-icons/fa";
+import Swal from "sweetalert2";
+// import toast from "react-hot-toast"
+import ShareModal from "./ShareModal";
 
 const BlogCardDetails = () => {
   const [blog, setBlog] = useState({});
+  const [isLiked, setIsLiked] = useState(false); 
   const { id } = useParams();
   const blogData = useLoaderData();
+  const [showModal, setShowModal] = useState(false);
+
+  const toggleModal = () => setShowModal(!showModal);
 
   useEffect(() => {
     const findBlog = blogData?.find((item) => item.id == id);
     setBlog(findBlog);
+
+    const likedItems = JSON.parse(localStorage.getItem("likedItems")) || [];
+    const foundLikedItem = likedItems.find((item) => item.id == id);
+    setIsLiked(!!foundLikedItem);
   }, [id, blogData]);
 
   const handleEventToCarts = () => {
-    const addedEventsArray = [];
+    // Retrieve liked items from local storage or initialize an empty array
+    const likedItems = JSON.parse(localStorage.getItem("likedItems")) || [];
 
-    const cartItems = JSON.parse(localStorage.getItem("carts"));
-
-    if (!cartItems) {
-      addedEventsArray.push(blog);
-      localStorage.setItem("carts", JSON.stringify([blog]));
+    if (!isLiked) {
+      // If not already liked, add the current blog to liked items
+      const updatedLikedItems = [...likedItems, blog];
+      localStorage.setItem("likedItems", JSON.stringify(updatedLikedItems));
+      setIsLiked(true);
       Swal.fire("Success!", "Item added to favorites successfully!", "success");
     } else {
-      const isExits = cartItems.find((item) => item.id == id);
-
-      if (!isExits) {
-        addedEventsArray.push(cartItems, blog);
-        localStorage.setItem("carts", JSON.stringify([...cartItems, blog]));
-        Swal.fire(
-          "Success!", "Item added to favorites successfully!", "success"
-        );
-      } else {
-        Swal.fire(
-          "No Duplicates Allow !",
-          "This Items Already Add to Carts , Please Check ! ",
-          "error"
-        );
-      }
+      // If already liked, remove the current blog from liked items
+      const updatedLikedItems = likedItems.filter(
+        (item) => item.id !== blog.id
+      );
+      localStorage.setItem("likedItems", JSON.stringify(updatedLikedItems));
+      setIsLiked(false);
+      Swal.fire("Removed!", "Item removed from favorites!", "success");
     }
+  };
+
+  const handleShare = () => {
+    toggleModal(); // Show the modal when Share button is clicked
   };
 
   return (
@@ -95,13 +102,25 @@ const BlogCardDetails = () => {
               <Link to="/" className="text-blue-500 hover:underline">
                 Back to Home
               </Link>
-              <button
-                onClick={handleEventToCarts}
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center"
-              >
-                <FaHeart className="mr-2" />
-                Add to Favorites
-              </button>
+              <div className="flex">
+                <button
+                  onClick={handleEventToCarts}
+                  className="font-bold py-2 px-4 rounded flex items-center mr-2"
+                >
+                  {isLiked ? (
+                    <FaHeart className="text-red-500" />
+                  ) : (
+                    <FaRegHeart />
+                  )}
+                </button>
+                <button
+                  onClick={handleShare}
+                  className="font-bold py-2 px-4 rounded flex items-center"
+                >
+                  <FaShareSquare />
+                </button>
+              </div>
+              {showModal && <ShareModal onClose={toggleModal} />}
             </div>
           </div>
         </div>
